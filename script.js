@@ -23,7 +23,7 @@ var cards = [{
         img: "https://picsum.photos/id/237/400/400"
     },
 ]
-
+ 
 var counter = 0
 var firstDivCard
 var firstImgCard
