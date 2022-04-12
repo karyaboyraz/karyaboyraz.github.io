@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Üretken Akademi Clon</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome  -->
+    <script src="https://kit.fontawesome.com/3349325c82.js" crossorigin="anonymous"></script>
+
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container">
+                <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html"><i style="font-size: x-large;"
+                                    class="fa fa-home mr-3"></i>
+                                Üretken Akademi</a>
+                        </li>
+                        <li class="nav-item ml-3 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">Biz
+                                Kimiz</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Yönetim Kurulumuz</a>
+                                <a class="dropdown-item" href="#">Ekibimiz</a>
+                                <a class="dropdown-item" href="#">İş Birlikleri</a>
+                            </div>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="nav-link" href="#">Yazılım Öğren</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="nav-link" href="#">Girişim Kur</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="nav-link" href="#">Kurumlar İçin</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="nav-link" href="#">İletişim</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-warning rounded-pill my-2" data-toggle="modal"
+                            data-target="#signInModal" type="button">Giriş Yap</button>
+                        <button class="btn btn-warning rounded-pill my-2 ml-3" data-toggle="modal"
+                            data-target="#signUpModal" type="button">Üye Ol</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Modal SignUp -->
+        <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Üye Ol</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://picsum.photos/200/300" class="w-100 my-auto">
+                            </div>
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="signUpName">İsim:</label>
+                                        <input type="name" class="form-control" id="signUpName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signUpLastname">Soyisim:</label>
+                                        <input type="name" class="form-control" id="signUpLastname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signUpEmail">E-Posta adresi:</label>
+                                        <input type="email" class="form-control" id="signUpEmail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signUpPass">Şifre:</label>
+                                        <input type="password" class="form-control" id="signUpPass">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signUpPassCheck">Şifreyi Doğrula:</label>
+                                        <input type="password" class="form-control" id="signUpPassCheck">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1"><a href="#">Kullanım
+                                                Koşullarını</a> Okudum Anladım</label>
+                                    </div>
+                                    <div class="text-center my-2">Or Sign Up</div>
+                                    <hr class="col-md-6">
+                                    <div class="d-flex justify-content-around mb-5">
+                                        <a href="https://www.linkedin.com/in/karya-boyraz/" target="_blank"><i
+                                                class="fab fa-2x text-danger fa-google-plus"></i></a>
+                                        <a href="#" target="_blank"><i
+                                                class="fab fa-2x text-primary fa-facebook"></i></i></a>
+                                        <a href="#" target="_blank"><i
+                                                class="fab text-dark fa-2x fa-github"></i></i></a>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                        <button type="button" class="btn btn-success ml-4">Kayıt Ol!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal SignIn -->
+        <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Giriş Yap</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="signInEmail">E-Posta adresi</label>
+                                <input type="email" class="form-control" id="signInEmail">
+                            </div>
+                            <div class="form-group">
+                                <label for="signInPass">Şifre</label>
+                                <input type="password" class="form-control" id="signInPass">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                        <button type="button" class="btn btn-success ml-4">Giriş Yap</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- <span is="type-async" id="type-text"></span>
+                <span class="blinking-cursor">_</span> -->
+
+    <div class="pt-5 bg-black" id="section1">
+        <div class="container text-center mt-5">
+            <div data-aos="fade-up" class="text-light display-3">3 Ayda Yazılım Kariyerine Başla!</div>
+            <div data-aos="fade-up" data-aos-delay="150" class="my-5">
+                <p class="text-light">Üretken Akademi’deki 3 aylık programlarda ücretsiz olarak
+                    yazılım öğrenebilir ve
+                    yeni kariyerine başlayabilir veya girişimcilik eğitimlerinin ardından kendi işinin patronu
+                    olabilirsin!</p>
+            </div>
+            <button data-aos="fade-up" data-aos-delay="250" class="btn btn-warning rounded-pill my-5 btn-lg"
+                type="button">Yazılım Öğren</button>
+            <button data-aos="fade-up" data-aos-delay="250" class="btn btn-warning rounded-pill my-5 btn-lg ml-3"
+                type="button">Girişim Kur</button>
+        </div>
+    </div>
+    <div data-aos="fade-up" class="mt-5 container" id="section2">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="counter-box"> <i class="fa fa-group mb-3 fa-4x d-block"></i>
+                    <span class="counter counterAfter text-center">10</span> <span
+                        class="counterAfter text-center">Bin+</span>
+                    <p class="mt-3 p-0">Katılımcı</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="counter-box"> <i class="fa fa-home mb-3 fa-4x d-block"></i> <span
+                        class="counter counterAfter text-center">500</span> <span
+                        class="counterAfter text-center">+</span>
+                    <p class="mt-3 p-0">Kurulan Girişim</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="counter-box"> <i class="fa fa-laptop mb-3 fa-4x d-block"></i> <span
+                        class="counter counterAfter text-center">100</span> <span
+                        class="counterAfter text-center">Bin+</span>
+                    <p class="mt-3 p-0">Erişim</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="counter-box"> <i class="fa fa-star mb-3 fa-4x d-block"></i> <span
+                        class="counter counterAfter text-center">100</span> <span
+                        class="counterAfter text-center">+</span>
+                    <p class="mt-3 p-0">Kurumsal İşbirliği</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr class="m-4">
+    <div class="m-4" id="section3">
+        <div class="row">
+            <div data-aos="fade-up" data-aos-offset="500" class="ml-5 col-md-6">
+                <img class="w-100 p-5" src="https://uretkenakademi.com/wp-content/uploads/2022/03/1-1.jpg"
+                    alt="NeSaglar">
+            </div>
+            <div class="col-md-4 my-auto">
+                <div data-aos="fade-right" class="h2 text-primary">Üretken Akademi</div>
+                <div data-aos="fade-right" class="h1 text-dark">Ne Sağlar?</div>
+                <div data-aos="fade-right" class="mt-4">
+                    <div class="row">
+                        <div class="col-md-1"><i class="fa text-primary fa-group fa-2x"></i></div>
+                        <div class="col-md-11">
+                            <h4 class="">25 Kişilik Gruplar</h4>
+                            <p>Sizinle aynı çalışma alanına sahip kişilerle özel gruplarla tanışın ve birlikte
+                                geliştirin!</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" class="mt-4">
+                    <div class="row">
+                        <div class="col-md-1"><i class="fa text-primary fa-star fa-2x"></i></div>
+                        <div class="col-md-11">
+                            <h4 class="">Uzmanlardan Akıl Hocalığı</h4>
+                            <p>Alanında uzman isimler hem girişimcilik yolculuğunda hem de teknik yolculuğunda sana yol
+                                gösteriyor olacak!</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" class="mt-4">
+                    <div class="row">
+                        <div class="col-md-1"><i class="fa text-primary fa-comment fa-2x"></i></div>
+                        <div class="col-md-11">
+                            <h4 class="">7/24 Etkileşimli Topluluk</h4>
+                            <p>10.000+ kişilik Üretken Akademi ailesinde her gün yeni insanlarla tanış ve fikir
+                                alışverişinde bulun!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr class="m-5">
+    <div class="m-5" id="section4">
+        <h1 class="text-center">Üretken Akademi'ye Güvenen<br>100+ Kurum'dan Birkaçı</h1> <br><br>
+        <div class="d-flex mt-4">
+            <div class="mx-auto">
+                <img src="https://uretkenakademi.com/wp-content/uploads/2022/01/indir-2.png" class="imgLogo ml-4"
+                    alt="googleDevelopers">
+                <img src="https://uretkenakademi.com/wp-content/uploads/2022/01/unnamed-20210607150532.png"
+                    class="imgLogo ml-4" alt="bilisimVadisi">
+                <img src="https://uretkenakademi.com/wp-content/uploads/2022/01/indir-17.png" class="imgLogo ml-4"
+                    alt="teknoparkIstanbul">
+                <img src="https://uretkenakademi.com/wp-content/uploads/2022/01/87fc30_47d3addbcbe34086926ffdaba9b21280_mv2.png"
+                    class="imgLogo ml-4" alt="apyVentures">
+                <img src="https://uretkenakademi.com/wp-content/uploads/2022/01/fc36a094983073.Y3JvcCw1OTA2LDQ2MjAsMCw2NDM.jpg"
+                    class="imgLogo ml-4" alt="turkKızılay">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr class="m-4">
+    <div class="m-4" id="section5">
+        <h1 class="text-center">Üretken Akademi'deki Mentörlerin</h1>
+        <div class="container">
+            <div class="row mt-4">
+                <div data-aos="fade-right" data-aos-delay="50" class="col-md-3">
+                    <div class="card p-3" style="width: 18rem;">
+                        <img class="card-img-top"
+                            src="https://uretkenakademi.com/wp-content/uploads/2022/01/channels4_profile.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-center">Merve İşler <br> <span
+                                    class="font-weight-bold">Google</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" data-aos-delay="150" class="col-md-3">
+                    <div class="card p-3" style="width: 18rem;">
+                        <img class="card-img-top"
+                            src="https://uretkenakademi.com/wp-content/uploads/2022/01/Ozan-mentor-resim-470x470-1.jpeg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-center">Ozan Sönmez <br> <span
+                                    class="font-weight-bold">YellowX</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" data-aos-delay="250" class="col-md-3">
+                    <div class="card p-3" style="width: 18rem;">
+                        <img class="card-img-top"
+                            src="https://uretkenakademi.com/wp-content/uploads/2022/01/ipek-çeliksöz.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-center">İpek Çeliksöz <br> <span class="font-weight-bold">212
+                                    Yatırım Fonu</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" data-aos-delay="350" class="col-md-3">
+                    <div class="card p-3" style="width: 18rem;">
+                        <img class="card-img-top"
+                            src="https://uretkenakademi.com/wp-content/uploads/2022/01/leventkopuz-1024x1024.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-center">Levent Kopuz <br> <span class="font-weight-bold">Uzman
+                                    Deneyim Tasarımcısı</span> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <div data-aos="fade-right" data-aos-delay="50" class="card p-3" style="width: 18rem;">
+                        <img class="card-img-top"
+                            src="https://uretkenakademi.com/wp-content/uploads/2022/03/Yeni-Proje-7.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-center">Sena Cebe <br> <span class="font-weight-bold">BTM</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" data-aos-delay="150" class="col-md-3">
+                    <div class="card p-3" style="width: 18rem;">
+                        <img class="card-img-top"
+                            src="https://uretkenakademi.com/wp-content/uploads/2022/01/1605084539922.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-center">Tuğrul Kaan Asan <br> <span
+                                    class="font-weight-bold">Trakyaka</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" data-aos-delay="250" class="col-md-3">
+                    <div class="card p-3" style="width: 18rem;">
+                        <img class="card-img-top"
+                            src="https://uretkenakademi.com/wp-content/uploads/2022/01/ovjD3i5Y_400x400.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-center">Talha Karataş <br> <span class="font-weight-bold">E-Spor
+                                    Federasyonu</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" data-aos-delay="350" class="col-md-3">
+                    <div class="card p-3" style="width: 18rem;">
+                        <img class="card-img-top"
+                            src="https://uretkenakademi.com/wp-content/uploads/2022/01/11577082.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-center">Sercan Yusuf <br> <span class="font-weight-bold">Uzman
+                                    Mobil Geliştirici</span> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr class="m-4">
+    <div class="my-4" id="section6">
+        <div class="pt-5 pb-5 bg-dark text-light">
+            <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active text-center p-4">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0"><i class="fa fa-quote-left"></i>
+                                Sürdürülebilirlik alanında yaptığımız Solution Challenge Incubation Program'da <br>
+                                kurduğumuz iş birliğinden çok memnun kaldık. Yepyeni projeler ile yeni nesile hep
+                                beraber ışık tutmaya devam etmek dileğiyle.
+                            </p>
+                            <br>
+                            <footer class="blockquote-footer">Merve İşler (Google)</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item text-center p-4">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0"><i class="fa fa-quote-left"></i>
+                                Sıfırdan bu süreçte başladığımız Argon Coin girişimimiz borsalarda günde 7 milyon+ lira
+                                <br>
+                                hacme ulaşan hale geldi. Bize her türlü desteğini gösteren, yardım eden Üretken
+                                Akademi'ye teşekkür ederiz.
+                            </p>
+                            <br>
+                            <footer class="blockquote-footer">Ahmet Öznar (Argon Coin)</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item text-center p-4">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0"><i class="fa fa-quote-left"></i>
+                                Üretken Akademi sayesinde uçuş öncesi deneyim odaklı projemiz için THY ile görüşme şansı
+                                elde ettik.
+                            </p>
+                            <br>
+                            <footer class="blockquote-footer">Yasin İnce (Girişimci Adayı)</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#client-testimonial-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#client-testimonial-carousel" data-slide-to="1"></li>
+                    <li data-target="#client-testimonial-carousel" data-slide-to="2"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr class="m-4">
+    <div class="p-4" id="section7">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4 my-auto">
+                <div class="container">
+                    <div class="h5 text-primary">Yazılımcı Yetiştirme Programı</div>
+                    <div class="h1 text-dark">Yazılım Öğren</div>
+                    <div class="mt-4">
+                        <p>Üretken Akademi Yazılımcı Yetiştirme Programları’na dahil olarak uzmanlaşmak istediğin alanda
+                            25
+                            er kişilik gruplarda eğitim al. Program sonunda Üretken Akademi işbirliği bulunan kurumlarda
+                            yeni kariyerine başla!</p>
+                    </div>
+                </div>
+                <button class="btn btn-warning rounded-pill my-5 btn-lg ml-3 px-4" type="button">Başla</button>
+            </div>
+            <div class="col-md-4">
+                <img class="mx-auto w-75" src="https://uretkenakademi.com/wp-content/uploads/2022/03/1-2.jpg"
+                    alt="learn_code">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="p-4" style="background-color: #e5f1ff;" id="section7">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <img class="mx-auto mt-5 w-75" src="https://uretkenakademi.com/wp-content/uploads/2022/03/1-3.jpg"
+                    alt="learn_code">
+            </div>
+            <div class="col-md-4 my-auto">
+                <div class="container">
+                    <div class="h5 text-primary">Girişimci Yetiştirme Programı</div>
+                    <div class="h1 text-dark">Kendi İşini, <br>
+                        Girişimini Kur!</div>
+                    <div class="mt-4">
+                        <p>Üretken Akademi Yazılımcı Yetiştirme Programları’na dahil olarak uzmanlaşmak istediğin alanda
+                            25 er kişilik gruplarda eğitim al. Program sonunda Üretken Akademi işbirliği bulunan
+                            kurumlarda yeni kariyerine başla!</p>
+                    </div>
+                </div>
+                <button class="btn btn-warning rounded-pill my-5 btn-lg ml-3 px-4" type="button">Başla</button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="m-4" id="section8">
+        <div class="text-center h1">Sıkça Sorulan Sorular</div>
+        <div class="container mt-5">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Üretken Akademi ücretli midir?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            Üretken Akademi program katılımcılarından hiçbir ücret talep etmemektedir.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                Üretken Akademi çalışmalarına katılabilir miyim?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            Üretken Akademi çalışmalarına takılmak için tek gereksinim Üretken Akademi’ye kayıt
+                            olmaktır. Katılmak isteyen herkes katılabilir.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Üretken Akademi hangi kurumun projesidir?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Üretken Akademi hiçbir kuruma, siyasi yapıya, sivil toplum örgütüne bağlı olmayan, bağımsız
+                            bir organizasyondur.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading4">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4"
+                                aria-expanded="false" aria-controls="collapse4">
+                                Üretken Akademi neyi amaçlar?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+                        <div class="card-body">
+                            Üretken Akademi, Türkiye’nin en büyük potansiyeli olan gençlerinin teknoloji üreterek
+                            kalkınmayı sağlamasını amaçlar.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading5">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5"
+                                aria-expanded="false" aria-controls="collapse5">
+                                Üretken Akademi çalışmaları nerede gerçekleşir?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
+                        <div class="card-body">
+                            Üretken Akademi çalışmaları tamamen online olarak gerçekleşir.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <footer style="background-color: #ededed;">
+        <div class="container pb-5">
+            <div class="row d-flex justify-content-between p-4">
+                <div class="col-md-4">
+                    <div class="d-flex">
+                        <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" style="width: 35px;">
+                        <h5 class="ml-3 mt-2">Üretken Akademi</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-center">Bizi Takip Edin</h5>
+                    <hr>
+                    <div class="justify-content-between d-flex">
+                        <a href="https://www.linkedin.com/in/karya-boyraz/" target="_blank"><i
+                                class="fab fa-2x text-primary fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-2x text-primary fa-instagram"></i></i></a>
+                        <a href="#" target="_blank"><i class="fab text-danger fa-2x fa-youtube"></i></i></a>
+                        <a href="mailto:karya.poyraz@gmail.com" target="_blank"><i
+                                class="fa fa-2x text-dark fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <h5>Yasal Ivır Zıvırlar</h5>
+                    <hr>
+                    <a href="#">
+                        Kullanım Koşulları ve Üyelik Sözleşmesi</a>
+                    <a href="#">KVKK Aydınlatma Metni</a>
+                    <a href="#">Veri Sahibi Başvuru Metni</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Return to Top -->
+    <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
