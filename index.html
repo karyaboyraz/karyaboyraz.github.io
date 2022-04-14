@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <!-- Required meta tags -->
@@ -23,120 +23,96 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-    <title>Card Game</title>
+    <title>Karya Boyraz</title>
 </head>
 
 <body class="bg-dark">
+    <div class="row text-light">
+         <!-- Vertical navbar -->
+        <div class="col-3">
+           
+            <div class="vertical-nav position-fixed bg-dark">
+                <div class="bg-dark text-light text-center rounded shadow-sm py-5 px-4"><img
+                        src="https://media-exp1.licdn.com/dms/image/C4E03AQHKTPXcKzyMCw/profile-displayphoto-shrink_200_200/0/1612865995723?e=1654732800&v=beta&t=9zVoAuT6RXYbOZdHf8Enmn5iG33EbBL4tJIn0iVhcGw"
+                        alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                    <h5 class="mb-0">Karya Boyraz</h5><span class="small text-uppercase text-muted">Front-End
+                        Developer</span>
+                    <ul class="social mb-0 list-inline mt-3">
+                        <li class="list-inline-item"><a href="#" class="social-link bg-light text-primary"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="social-link bg-light text-dark"><i
+                                    class="fa fa-github"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="social-link bg-light text-primary"><i
+                                    class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
 
-    <div class="container">
-        <h1 class="text-light text-center mt-5">Card Game</h1>
-        <h5 class="text-light">Score: <span id="scoreid">0</span></h5>
-        <h5 class="text-light">Move: <span id="moveid">10</span></h5>
-        <div class="row m-5">
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-0" onclick="selectCard1(0)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(0)" id="img-0">
-                    <img src="https://picsum.photos/id/220/400/400" class="card-img-top">
-                </div>
+                <ul class="nav flex-column bg-dark mb-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light font-italic active" id="v-pills-home-tab" data-toggle="pill"
+                            href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <i class="fa mr-3 text-outline-dark fa-home"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light font-italic" id="v-pills-profile-tab" data-toggle="pill"
+                            href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">
+                            <i class="fa mr-3 text-outline-dark fa-code"></i>Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light font-italic" id="v-pills-home-tab" data-toggle="pill"
+                            href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <i class="fa mr-3 text-outline-dark fa-hourglass"></i>Experience
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light font-italic" id="v-pills-home-tab" data-toggle="pill"
+                            href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <i class="fa mr-3 text-outline-dark fa-briefcase"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light font-italic" id="v-pills-home-tab" data-toggle="pill"
+                            href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <i class="fa mr-3 text-outline-dark fa-comment-dots"></i>Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light font-italic" id="v-pills-home-tab" data-toggle="pill"
+                            href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <i class="fa mr-3 text-outline-dark fa-phone"></i>Contacts
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-1" onclick="selectCard1(1)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(1)" id="img-1">
-                    <img src="https://picsum.photos/id/27/400/400" class="card-img-top">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-2" onclick="selectCard1(2)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(2)" id="img-2">
-                    <img src="https://picsum.photos/id/127/400/400" class="card-img-top">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-3" onclick="selectCard1(3)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(3)" id="img-3">
-                    <img src="https://picsum.photos/id/7/400/400" class="card-img-top">
-                </div>
-            </div>
+            <!-- End vertical navbar -->
+
         </div>
-        <div class="row m-5">
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-4" onclick="selectCard1(4)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(4)" id="img-4">
-                    <img src="https://picsum.photos/id/8/400/400" class="card-img-top">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-5" onclick="selectCard1(5)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(5)" id="img-5">
-                    <img src="https://picsum.photos/id/44/400/400" class="card-img-top">
+        <!-- Content -->
+        <div class="col-9">
+            <div class="p-5 container h-100" style="height: 100vh;">
+                <h1 class="f">HELLO,</h1>
+                <h4 class="my-5">I am Mugi Doe, web developer from Melbourne, Australia. I have rich experience in web
+                    site design and
+                    building and customization, also I am good at wordpress.</h4>
+                <div class="p-5">
+                    <button type="button" class="btn btn-outline-light btn-info">Info</button>
+                    <button type="button" class="btn btn-outline-light btn-info">Info</button>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-6" onclick="selectCard1(6)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(6)" id="img-6">
-                    <img src="https://picsum.photos/id/10/400/400" class="card-img-top">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-7" onclick="selectCard1(7)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(7)" id="img-7">
-                    <img src="https://picsum.photos/id/11/400/400" class="card-img-top">
-                </div>
-            </div>
-        </div>
-        <div class="row m-5">
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-8" onclick="selectCard1(8)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(8)" id="img-8">
-                    <img src="https://picsum.photos/id/12/400/400" class="card-img-top">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-9" onclick="selectCard1(9)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(9)" id="img-9">
-                    <img src="https://picsum.photos/id/13/400/400" class="card-img-top">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-10" onclick="selectCard1(10)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(10)" id="img-10">
-                    <img src="https://picsum.photos/id/14/400/400" class="card-img-top">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card bg-warning border-1 p-4" id="block-11" onclick="selectCard1(11)">
-                    <img src="https://uretkenakademi.com/wp-content/uploads/2021/12/logo.svg" class="card-img-top">
-                </div>
-                <div class="card d-none" onclick="selectCard1(11)" id="img-11">
-                    <img src="https://picsum.photos/id/15/400/400" class="card-img-top">
+            <div class="p-5 container my-auto h-100" style="height: 100vh;">
+                <h1>HELLO,</h1>
+                <h4 class="my-5">I am Mugi Doe, web developer from Melbourne, Australia. I have rich experience in web
+                    site design and
+                    building and customization, also I am good at wordpress.</h4>
+                <div class="p-5">
+                    <button type="button" class="btn btn-outline-light btn-info">Info</button>
+                    <button type="button" class="btn btn-outline-light btn-info">Info</button>
                 </div>
             </div>
         </div>
     </div>
-
 
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
