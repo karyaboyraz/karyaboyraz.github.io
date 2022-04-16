@@ -1,73 +1,26 @@
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
+
 .vertical-nav {
-    min-width: 17rem;
-    width: 17rem;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s;
-  }
-  
-  .page-content {
-    width: calc(100% - 17rem);
-    margin-left: 17rem;
-    transition: all 0.4s;
-  }
-  
-  /* for toggle behavior */
-  
-  #sidebar.active {
-    margin-left: -17rem;
-  }
-  
-  #content.active {
-    width: 100%;
-    margin: 0;
-  }
-  
-  @media (max-width: 768px) {
-    #sidebar {
-      margin-left: -17rem;
-    }
-    #sidebar.active {
-      margin-left: 0;
-    }
-    #content {
-      width: 100%;
-      margin: 0;
-    }
-    #content.active {
-      margin-left: 17rem;
-      width: calc(100% - 17rem);
-    }
-  }
-
-
-.social-link {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    border-radius: 50%;
-    transition: all 0.3s;
-    font-size: 0.9rem;
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
 }
 
-.social-link:hover, .social-link:focus {
-    background: #ddd;
-    text-decoration: none;
-    color: #555;
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+
+.iconSize {
+  width: 30px;
+  height: 30px;
+}
+
+.heigh100 {
+  height: 100vh;
 }
