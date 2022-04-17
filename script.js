@@ -133,7 +133,7 @@ function selectCard(a) {
             icon: 'error',
             showCancelButton: true,
             confirmButtonText: 'Yes, do it!',
-            cancelButtonText: 'No, Im a coward...',
+            cancelButtonText: 'No, thanks',
             reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
@@ -168,7 +168,7 @@ function selectCard(a) {
             icon: 'success',
             showCancelButton: true,
             confirmButtonText: 'Yes, do it!',
-            cancelButtonText: 'No, Im a coward...',
+            cancelButtonText: 'No, thanks',
             reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
