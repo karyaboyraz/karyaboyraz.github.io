@@ -21,87 +21,117 @@
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <title>Karya Boyraz</title>
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Card Game</title>
 </head>
 
-<body class="bg-dark">
-    <div class="row text-light">
-        <!-- Vertical navbar -->
-        <div class="col-md-3">
-            <div class="vertical-nav position-fixed bg-dark">
-                <div class="bg-dark text-light text-center rounded shadow-sm py-5 px-4"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQHKTPXcKzyMCw/profile-displayphoto-shrink_200_200/0/1612865995723?e=1654732800&v=beta&t=9zVoAuT6RXYbOZdHf8Enmn5iG33EbBL4tJIn0iVhcGw" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                    <h5 class="mb-0">Karya Boyraz</h5><span class="small text-uppercase text-muted">Front-End
-                        Developer</span>
-                    <ul class="social mb-0 list-inline mt-3">
-                        <li class="list-inline-item"><a href="#" class="iconSize d-flex align-items-center justify-content-center rounded-circle border text-decoration-none bg-light text-primary"><i class="fa fa-linkedin"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="iconSize d-flex align-items-center justify-content-center rounded-circle border text-decoration-none bg-light text-dark"><i class="fa fa-github"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="iconSize d-flex align-items-center justify-content-center rounded-circle border text-decoration-none bg-light text-primary"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <ul class="nav flex-column bg-dark mb-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-light font-italic active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                            <i class="fa mr-3 text-outline-dark fa-home"></i>Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light font-italic" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">
-                            <i class="fa mr-3 text-outline-dark fa-code"></i>Skills
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light font-italic" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                            <i class="fa mr-3 text-outline-dark fa-hourglass"></i>Experience
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light font-italic" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                            <i class="fa mr-3 text-outline-dark fa-briefcase"></i>Projects
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light font-italic" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                            <i class="fa mr-3 text-outline-dark fa-comment-dots"></i>Testimonials
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light font-italic" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                            <i class="fa mr-3 text-outline-dark fa-phone"></i>Contacts
-                        </a>
-                    </li>
-                </ul>
+<body class="bg-dark container">
+    <!-- UI Area -->
+    <section class="mt-2">
+        <h1 class=" text-center">Card Game</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Score: <span id="scoreid">0</span></h5>
+                <h5>Move: <span id="moveid">10</span></h5>
             </div>
-            <!-- End vertical navbar -->
+            <div class="col-md-6 justify-content-end d-flex">
+                <button type="button" class="btn" data-toggle="modal" data-target="#settingModal">
+                    <i class="fa fa-cog fa-2x"></i>
+                </button>
+                <div class="modal fade text-dark" id="settingModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Settings</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="custom-control custom-switch custom-switch-md">
+                                    <input type="checkbox" class="custom-control-input" id="darkModeStatus">
+                                    <label class="custom-control-label pt-1" for="darkModeStatus">Dark Mode </label>
+                                </div>
+                                <div class="custom-control custom-switch custom-switch-md">
+                                    <input type="checkbox" class="custom-control-input" id="copyrightStatus">
+                                    <label class="custom-control-label pt-1" for="copyrightStatus">Copyright</label>
+                                </div>
+                                <hr>
+                                <div class="text-center">
+                                    <h6>Karya Boyraz</h6>
+                                    <ul class="social mb-0 list-inline mt-3">
+                                        <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/karya-boyraz/" class="iconSize d-flex align-items-center justify-content-center rounded-circle border text-decoration-none bg-light text-primary"><i class="fa fa-linkedin"></i></a></li>
+                                        <li class="list-inline-item"><a target="_blank" href="https://github.com/karyaboyraz" class="iconSize d-flex align-items-center justify-content-center rounded-circle border text-decoration-none bg-light text-dark"><i class="fa fa-github"></i></a></li>
+                                        <li class="list-inline-item"><a href="#" class="iconSize d-flex align-items-center justify-content-center rounded-circle border text-decoration-none bg-light text-primary"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
-        <!-- Content -->
-        <div class="col-md-9">
-            <div class="p-5 h-100">
-                <h1 class="display-1 my-auto">HELLO,</h1>
-                <h4 class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nihil harum ab, necessitatibus ipsam nisi unde quibusdam inventore vero vitae similique cumque commodi optio, alias aliquid recusandae amet. Repellat, voluptas?</h4>
-                <div class="p-5">
-                    <button type="button" class="btn btn-outline-light btn-info">Info</button>
-                    <button type="button" class="btn btn-outline-light btn-info">Info</button>
-                </div>
-            </div>
-            <div class="p-5 h-100">
-                <h1>HELLO,</h1>
-                <h4 class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nihil harum ab, necessitatibus ipsam nisi unde quibusdam inventore vero vitae similique cumque commodi optio, alias aliquid recusandae amet. Repellat, voluptas?</h4>
-                <div class="p-5">
-                    <button type="button" class="btn btn-outline-light btn-info">Info</button>
-                    <button type="button" class="btn btn-outline-light btn-info">Info</button>
-                </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
-    </script>
-    <script src="script.js"></script>
+    </section>
+    <!-- Game Area -->
+    <section class="m-4">
+        <div class="mx-5 row">
+            <div data-aos="flip-left" data-aos-delay="50" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-0" onclick="selectCard(0)"></div>
+                <div class="card d-none" onclick="selectCard(0)" id="img-0"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="100" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-1" onclick="selectCard(1)"></div>
+                <div class="card d-none" onclick="selectCard(1)" id="img-1"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="150" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-2" onclick="selectCard(2)"></div>
+                <div class="card d-none" onclick="selectCard(2)" id="img-2"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="200" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-3" onclick="selectCard(3)"></div>
+                <div class="card d-none" onclick="selectCard(3)" id="img-3"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="250" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-4" onclick="selectCard(4)"></div>
+                <div class="card d-none" onclick="selectCard(4)" id="img-4"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="300" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-5" onclick="selectCard(5)"></div>
+                <div class="card d-none" onclick="selectCard(5)" id="img-5"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="350" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-6" onclick="selectCard(6)"></div>
+                <div class="card d-none" onclick="selectCard(6)" id="img-6"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="400" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-7" onclick="selectCard(7)"></div>
+                <div class="card d-none" onclick="selectCard(7)" id="img-7"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="450" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-8" onclick="selectCard(8)"></div>
+                <div class="card d-none" onclick="selectCard(8)" id="img-8"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="500" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-9" onclick="selectCard(9)"></div>
+                <div class="card d-none" onclick="selectCard(9)" id="img-9"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="550" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-10" onclick="selectCard(10)"></div>
+                <div class="card d-none" onclick="selectCard(10)" id="img-10"></div>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="600" class="col-md-3 p-3">
+                <div class="card bg-warning border-1 p-3" id="block-11" onclick="selectCard(11)"></div>
+                <div class="card d-none" onclick="selectCard(11)" id="img-11"></div>
+            </div>
+        </div>
+    </section>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+</script>
+<script src="script.js"></script>
 </html>
