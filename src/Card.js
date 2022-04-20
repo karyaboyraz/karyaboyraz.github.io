@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Card.css";
 
-export default class extends Component {
+export default class Card extends Component {
   render() {
     const { country, weather, celcius, city , img , kelvin , fahrenheit} = this.props.info;
     let myStyle = {
