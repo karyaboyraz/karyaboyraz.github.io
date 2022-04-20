@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
+@import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+li {
+  font-size: 25px;
+}
+.weather-card {
+  height: 740px;
+  width: 450px;
+  box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+.heading {
+  font-size: 35px;
+}
+.tempTypeTop {
+  font-size: 85px;
+}
+.location {
+  font-size: 21px;
+}
